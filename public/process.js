@@ -1,7 +1,7 @@
 var socket = io();
 
 // When we receive a player event, find out what it is
-socket.on('player event', function(msg){
+socket.on('player event', function(msg) {
     switch(msg) {
         case 37:
             console.log("PLAYER1_MOVE_LEFT");
@@ -24,6 +24,9 @@ socket.on('player event', function(msg){
     }
 });
 
+socket.on('client log', function(msg) {
+    console.log(msg);
+});
 // On document ready
 $(function() {
 
