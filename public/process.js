@@ -1,25 +1,32 @@
 var socket = io();
+var player = null;
+
+// When we receive what player we are, set it globally
+socket.on('set player', function(msg) {
+    player = msg.toUpperCase();
+    console.log("You are: " + player);
+});
 
 // When we receive a player event, find out what it is
 socket.on('player event', function(msg) {
     switch(msg) {
         case 37:
-            console.log("PLAYER1_MOVE_LEFT");
+            console.log(player+"_MOVE_LEFT");
             break;
         case 39:
-            console.log("PLAYER1_MOVE_RIGHT");
+            console.log(player+"_MOVE_RIGHT");
             break;
         case 38:
-            console.log("PLAYER1_MOVE_UP");
+            console.log(player+"_MOVE_UP");
             break;
         case 40:
-            console.log("PLAYER1_MOVE_DOWN");
+            console.log(player+"_MOVE_DOWN");
             break;
         case 90:
-            console.log("PLAYER1_ATTACK_PRIMARY");
+            console.log(player+"_ATTACK_PRIMARY");
             break;
         case 88:
-            console.log("PLAYER1_ATTACK_SECONDARY");
+            console.log(player+"_ATTACK_SECONDARY");
             break;
     }
 });

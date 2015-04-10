@@ -27,11 +27,11 @@ io.on('connection', function(socket) {
     // Set to player 1 or 2
     if(!player1) {
         player1 = socket.id;
-        io.emit('client log', 'You are PLAYER 1');
+        io.to(player1).emit('set player', 'player1');
         console.log('PLAYER 1 has joined the game ('+ socket.id +')');
     } else if(!player2) {
         player2 = socket.id;
-        io.emit('client log', 'You are PLAYER 2');
+        io.to(player2).emit('set player', 'player2');
         console.log('PLAYER 2 has joined the game ('+ socket.id +')');
     } else {
         io.emit('client log', 'You are DISCONNECTED');
