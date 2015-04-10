@@ -1,8 +1,6 @@
 var socket = io();
 var player = null;
 
-var player = Storyline.Get
-
 // When we receive what player we are, set it globally
 socket.on('set player', function(msg) {
     player = msg.toUpperCase();
