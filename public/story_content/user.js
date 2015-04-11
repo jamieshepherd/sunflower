@@ -1,11 +1,8 @@
-// Make a storyline object global
-var storyline = null;
-
 function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6YxyJTeNwSA":
+      case "61UlWIitIqd":
         Script1();
         break;
   }
@@ -13,7 +10,7 @@ function ExecuteScript(strId)
 
 function Script1()
 {
-  console.log('Script executed');
-  storyline = GetPlayer();
+  console.log('storyline script executed');
+storyline = GetPlayer();
 }
 
