@@ -2,12 +2,12 @@
 <html style="height: 100%;">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<!-- Created using Articulate Storyline 2.4 - http://www.articulate.com  --> 
-<!-- version: 2.4.1501.717 --> 
+<!-- Created using Articulate Storyline 2.4 - http://www.articulate.com  -->
+<!-- version: 2.4.1501.717 -->
 
 <title>test</title>
 <style>
-body { margin: 0px; } 
+body { margin: 0px; }
 object {outline: none;}
 </style>
 <script>
@@ -29,7 +29,7 @@ if (navigator.plugins["Shockwave Flash"])
 }
 else
 {
-	try 
+	try
 	{
 		var oActiveX = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.10");
 		if (oActiveX)
@@ -60,17 +60,17 @@ if (g_bRedirectAMP)
 	{
 		g_bTinCan = true;
 	}
-	
+
 	if (g_bTinCan)
 	{
 		var strQuery = "tincan=" + g_bTinCan + "&" + document.location.search.substr(1);
-		
+
 		if (g_bAOSupport)
 		{
 			strQuery = "aosupport=true&" + strQuery;
 			g_bAOSupport = false;
 		}
-		
+
 		location.replace("amplaunch.html#" + strQuery);
 	}
 	else
@@ -81,7 +81,7 @@ if (g_bRedirectAMP)
 else if (g_bRedirectHTML5)
 {
 	var strLocation = "story_html5.html";
-	
+
 	if (g_bTinCan)
 	{
 		strLocation += "?tincan=" + g_bTinCan + "&" + document.location.search.substr(1);
@@ -89,14 +89,14 @@ else if (g_bRedirectHTML5)
 	else if (g_bLMS)
 	{
 		strLocation += "?lms=1";
-		
+
 		if (g_bWarnOnCommitFail)
 		{
 			strLocation += "&warncommit=1";
 		}
 	}
-	
-	location.replace(strLocation);	
+
+	location.replace(strLocation);
 }
 
 var g_strContentFolder = "story_content";
@@ -140,12 +140,12 @@ if (g_bScrollbars)
 }
 
 	WriteSwfObject(g_strSwfFile,
-		       g_nWidth, 
-		       g_nHeight, 
+		       g_nWidth,
+		       g_nHeight,
 		       g_strScale,
-		       g_strAlign, 
-		       g_strQuality, 
-		       g_strBgColor, 
+		       g_strAlign,
+		       g_strQuality,
+		       g_strBgColor,
 			   g_bCaptureRC,
 			   g_strWMode,
 		       g_strFlashVars);
@@ -164,5 +164,8 @@ ResizeBrowser(g_strBrowserSize);
 
 <DIV id='divWebObjects'></DIV>
 
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="process.js"></script>
 </body>
 </html>

@@ -41,7 +41,6 @@ io.on('connection', function(socket) {
     // On event received, emit event to everyone
     socket.on('player event', function(msg) {
         io.emit('player event', msg);
-        io.emit('client log', msg);
     });
 
     // On log event, write to console
