@@ -3,6 +3,7 @@ var express = require('express');
 var app     = express();
 var http    = require('http').Server(app);
 var io      = require('socket.io')(http);
+var path    = require('path');
 
 // Make our two player connections
 var player1 = null;
@@ -12,8 +13,7 @@ app.use(express.static('public'));
 
 // Routes
 app.get('/', function(req, res){
-    //res.sendFile(path.resolve('index.html'));
-    res.sendFile('public/story.html', { root: __dirname });
+    res.sendFile('story.html', { root: path.join(__dirname, 'public') });
 });
 
 // Set up a listener
