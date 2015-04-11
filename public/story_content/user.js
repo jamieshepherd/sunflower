@@ -10,6 +10,7 @@ function ExecuteScript(strId)
 
 function Script1()
 {
-  alert('nugget');
+  var player = GetPlayer();
+  console.log(player.getVar("moveVar"));
 }
 
