@@ -1,10 +1,8 @@
-var storyline =  null;
-
 function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "61UlWIitIqd":
+      case "5YqG1mj9qTc":
         Script1();
         break;
   }
