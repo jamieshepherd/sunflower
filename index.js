@@ -38,6 +38,13 @@ io.on('connection', function(socket) {
         socket.disconnect();
     }
 
+    // If we have two players, game is ready
+    if(player1 != null && player2 != null) {
+        io.emit('game ready', true);
+    } else {
+        io.emit('game ready', false);
+    }
+
     // On event received, emit event to everyone
     socket.on('player event', function(msg) {
         io.emit('player event', msg);

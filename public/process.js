@@ -14,9 +14,17 @@ socket.on('set player', function(msg) {
 // When we receive a player event, find out what it is
 socket.on('player event', function(msg) {
     // Take the command and set a storyline variable for it
-    storyline.SetVar(msg,1);
+    console.log('We are getting:'+msg);
+
+    storyline.SetVar(msg,true);
+    storyline.SetVar(msg,false);
     // Storyline will see variable is changed to 1
     // Storyline will do an action, and then switch it to 0
+});
+
+// When we have two players, server let's us know game is ready
+socket.on('game ready', function(msg) {
+    storyline.SetVar('GAME_READY', msg);
 });
 
 socket.on('client log', function(msg) {
