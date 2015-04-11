@@ -13,7 +13,7 @@ app.use(express.static('public'));
 // Routes
 app.get('/', function(req, res){
     //res.sendFile(path.resolve('index.html'));
-    res.sendFile('public/index.html', { root: __dirname });
+    res.sendFile('public/story.html', { root: __dirname });
 });
 
 // Set up a listener
