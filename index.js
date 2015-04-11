@@ -17,8 +17,8 @@ app.get('/', function(req, res){
 });
 
 // Set up a listener
-http.listen(3000, function(){
-    console.log('[SERVER] Listening on *:3000');
+http.listen(80, function(){
+    console.log('[SERVER] Listening on *:80');
 });
 
 // Socket connection

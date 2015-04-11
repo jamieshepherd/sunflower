@@ -1,3 +1,4 @@
+// Make a storyline object global
 var storyline = null;
 
 function ExecuteScript(strId)
@@ -12,15 +13,7 @@ function ExecuteScript(strId)
 
 function Script1()
 {
-  console.log('script executed');
+  console.log('Script executed');
   storyline = GetPlayer();
-  console.log('proving we get player:');
-  console.log(storyline);
-  console.log('trying to get a variable moveVar');
-  console.log(storyline.GetVar("moveVar"));
-  console.log('trying to set moveVar');
-  storyline.SetVar("moveVar", 1);
-  console.log('trying to get variable moveVar');
-  console.log(storyline.GetVar("moveVar"));
 }
 

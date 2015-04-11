@@ -1,4 +1,7 @@
-console.log("INCLUDE WORKED");
+// Check that we've loaded our client
+console.log("Process.js loaded");
+
+// Set variables
 var socket    = io();
 var player    = null;
 
