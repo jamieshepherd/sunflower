@@ -1,4 +1,5 @@
 GAME_READY                  = true/false
+GAME_PAUSED                 = true/false
 TIME_REMAINING              = number
 GAME_WINNER                 = string
 

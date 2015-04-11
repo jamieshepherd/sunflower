@@ -1,0 +1,2 @@
+- Queue system, if people are not player1/player2, show a message saying queued
+    Let them in when another player drops out
