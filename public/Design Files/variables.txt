@@ -1,0 +1,19 @@
+GAME_READY                  = true/false
+TIME_REMAINING              = number
+GAME_WINNER                 = string
+
+PLAYER1_HEALTH              = number
+PLAYER1_MOVE_LEFT           = true/false
+PLAYER1_MOVE_RIGHT          = true/false
+PLAYER1_MOVE_UP             = true/false
+PLAYER1_MOVE_DOWN           = true/false
+PLAYER1_ATTACK_PRIMARY      = true/false
+PLAYER1_ATTACK_SECONDARY    = true/false
+
+PLAYER2_HEALTH              = number
+PLAYER2_MOVE_LEFT           = true/false
+PLAYER2_MOVE_RIGHT          = true/false
+PLAYER2_MOVE_UP             = true/false
+PLAYER2_MOVE_DOWN           = true/false
+PLAYER2_ATTACK_PRIMARY      = true/false
+PLAYER2_ATTACK_SECONDARY    = true/false

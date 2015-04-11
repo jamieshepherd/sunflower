@@ -14,9 +14,7 @@ socket.on('set player', function(msg) {
 // When we receive a player event, find out what it is
 socket.on('player event', function(msg) {
     // Take the command and set a storyline variable for it
-    console.log(msg);
-    var temp = storyline.GetVar("moveVar");
-    storyline.SetVar("moveVar",temp+1);
+    storyline.SetVar(msg,1);
     // Storyline will see variable is changed to 1
     // Storyline will do an action, and then switch it to 0
 });
