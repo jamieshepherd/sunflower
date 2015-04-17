@@ -40,14 +40,23 @@ io.on('connection', function(socket) {
 
     // If we have two players, game is ready
     if(player1 != null && player2 != null) {
+        console.log('game is ready');
         io.emit('game ready', true);
-    } else {
-        io.emit('game ready', false);
     }
 
     // On event received, emit event to everyone
     socket.on('player event', function(msg) {
         io.emit('player event', msg);
+    });
+
+    // On animation event received, emit event to everyone
+    socket.on('animation event', function(msg) {
+        io.emit('animation event', msg);
+    });
+
+    // On CANCEL animation event received, emit event to everyone
+    socket.on('cancel animation event', function(msg) {
+        io.emit('cancel animation event', msg);
     });
 
     // On log event, write to console
@@ -57,6 +66,8 @@ io.on('connection', function(socket) {
 
     // When user disconnects, set game over
     socket.on('disconnect', function() {
+
+        io.emit('game ready', false);
 
         // Set player to null so someone else can join
         if(player1 == socket.id) {
